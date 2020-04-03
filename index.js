@@ -2,9 +2,10 @@ var SlackBot = require('slackbots');
 var request = require("request");
 
 // create a bot
+const envKey = process.env.JOKES_BOT_TOKEN
 var bot = new SlackBot({
-    token: 'xoxb-810463486212-1030424444835-ZV3CYxsu1K9A3vlgLvc3bCJi', // Add a bot https://my.slack.com/services/new/bot and put the token 
-    name: 'topcoderbot'
+  token: envKey,
+  name: 'topcoderbot'
 });
 
 const getRandomJoke = (callback, user) => {
