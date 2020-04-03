@@ -44,7 +44,6 @@ bot.on('start', function() {
     bot.postMessageToGroup('private_group', 'meow!', params); 
 
     bot.on("message", msg => {
-        console.log(' ---------- got ', msg);
         switch (msg.type) {
         case "message":
           if (msg.channel[0] === "D" && msg.bot_id === undefined) {
